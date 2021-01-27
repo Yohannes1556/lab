@@ -50,7 +50,27 @@ else if(functionChoice == 3){
 
 else if (functionChoice ==4){
     console.log("subtraction");
-    
+    multiNumberReceiver();
+
+    Division(numbers);
+    function Division(numbers) {
+        
+        let quotient = numbers[0];
+        for (let i = 1; i < numbers.length; i++){
+            if (numbers[i] == 0){
+                console.log("Invalid Form: Number can't be divided by 0");
+                return;
+            }else {
+                for (let j = 1; j < numbers.length; j++){
+                    quotient = quotient / parseInt(numbers[j]);
+                }
+                console.log("The Quotients is " + quotient);
+                return;
+            }
+        }
+    }
+
+
 }
 
 
